@@ -1,0 +1,46 @@
+{
+  "method": "built-in image_gen",
+  "style": "Category reference: charcoal, natural walnut and metal, subtle amber sound waves",
+  "assets": [
+    {
+      "file": "public/images/marketing/promotion-home-v2.webp",
+      "brief": "Wide 3:1 promotional banner, home cinema loudspeaker ensemble with walnut floorstanding speakers, black center speaker, compact surrounds and matte black subwoofer. Exact title 'RECOMMENDED HOME THEATER' in restrained white typography near top. No other text."
+    },
+    {
+      "file": "public/images/marketing/promotion-speakers-v2.webp",
+      "brief": "Wide 3:1 promotional banner, a curated line-up of walnut and black floorstanding speakers and bookshelf speakers. Exact title 'RECOMMENDED LOUDSPEAKER' in restrained white typography near top. No other text."
+    },
+    {
+      "file": "public/images/marketing/leak-v2.webp",
+      "brief": "Square product photograph of LEAK Stereo 230 integrated amplifier, walnut wood sleeve, silver face, two large silver knobs, small central controls. Exact brand 'LEAK' small white at top. No other text."
+    },
+    {
+      "file": "public/images/marketing/dc-block-v2.webp",
+      "brief": "Square product photograph of audiolab DC Block, compact rectangular matte black AC power conditioning box, front audiolab marking. Exact brand 'audiolab' small white at top. No other text."
+    },
+    {
+      "file": "public/images/marketing/aura-v2.webp",
+      "brief": "Square product photograph of Wharfedale AURA Series, a pair of walnut veneer floorstanding speakers with black round drivers and compact rectangular ribbon tweeters. Exact brand 'WHARFEDALE' small white at top. No other text."
+    },
+    {
+      "file": "public/images/marketing/mission-v2.webp",
+      "brief": "Square product photograph of Mission LX MK II bookshelf speakers in natural walnut and Mission 778X silver integrated amplifier between them. Exact brand 'MISSION' small white at top. No other text."
+    },
+    {
+      "file": "public/images/marketing/sw-v2.webp",
+      "brief": "Square product photograph of Wharfedale SW Series matte black subwoofer with large forward-facing black woofer, three-quarter angle. Exact brand 'WHARFEDALE' small white at top. No other text."
+    },
+    {
+      "file": "public/images/marketing/magnetar-v2.webp",
+      "brief": "Square product photograph of Magnetar UDP800 4K UHD Blu-Ray Player, black low-profile premium disc player with slim disc tray, small display and round silver power button. Exact brand 'MAGNETAR' small white at top. No other text."
+    },
+    {
+      "file": "public/images/marketing/7000a-v2.webp",
+      "brief": "Square product photograph of audiolab 7000A integrated amplifier, low silver brushed aluminum front with large black volume dial at right, small black rectangular screen left. Exact brand 'audiolab' small white at top. No other text."
+    },
+    {
+      "file": "public/images/marketing/sine-v2.webp",
+      "brief": "Square macro product photograph of SINE Banana Gold / Platinum speaker cable banana connectors, pairs of precision polished silver and gold metal banana plugs lying naturally on dark reflective surface, black cable sections. Exact brand 'SINE' small white at top. No other text."
+    }
+  ]
+}

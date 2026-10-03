@@ -102,8 +102,8 @@ header{position:fixed;z-index:50;padding-inline:var(--page-gutter);grid-template
 @media(prefers-reduced-motion:reduce){.highlight-track{animation:none}.highlight-window{overflow-x:auto}.highlight-group[aria-hidden=true]{display:none}.promotion-card img,.highlight-card img{transition:none}}
 
 /* Muted amber and charcoal grade, matched to the speaker category. */
-.promotion-card img,.highlight-image img{filter:brightness(.72) saturate(.5);transition:filter .45s ease,transform .65s ease}
-.promotion-card:hover img,.highlight-card:hover img{filter:brightness(.86) saturate(.6)}
+.promotion-card img,.highlight-image img{filter:brightness(.72) saturate(.8);transition:filter .45s ease,transform .65s ease}
+.promotion-card:hover img,.highlight-card:hover img{filter:brightness(.86) saturate(.8)}
 .site-footer{padding:0 var(--page-gutter) 28px;background:#080603}
 .footer-rule{height:1px;background:linear-gradient(90deg,#ad884e77,#ad884e25);margin-bottom:24px}
 .footer-brands{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px 24px;padding:0 0 28px}
