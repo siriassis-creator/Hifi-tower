@@ -175,37 +175,39 @@ header{position:fixed;z-index:50;padding-inline:var(--page-gutter);grid-template
 @media(prefers-reduced-motion:reduce){.highlight-group[aria-hidden=true]{display:flex}.highlight-window{overflow:hidden}.highlight-arrow{transition:none}}
 
 /* TV with a five-channel home cinema system. */
-.home-theater{min-width:0;width:100%}
-.theater-scene{position:relative;padding:14px 48px 94px;background:radial-gradient(ellipse at 50% 76%,#5a3e212a,transparent 70%);isolation:isolate}
-.theater-scene::after{content:"";position:absolute;bottom:22px;left:0;right:0;height:48px;background:radial-gradient(ellipse,#b9905433,transparent 70%);z-index:-1}
-.theater-tv{position:relative;padding:8px 8px 0;border-radius:9px;background:linear-gradient(135deg,#514c43,#161615 10%,#080808 85%,#454039);border:1px solid #5e5649;box-shadow:0 14px 35px #0009}
-.tv-screen{aspect-ratio:16/9;min-height:200px;background:#000;overflow:hidden;border:1px solid #000}
+/* Large borderless television with AURA speakers and a vertical channel remote. */
+.about{grid-template-columns:minmax(0,.25fr) minmax(0,.75fr);gap:28px}
+.about-copy h2{font-size:clamp(32px,3vw,46px);line-height:1.04;margin:20px 0 22px}
+.about-copy .eyebrow{font-size:8px;letter-spacing:.3em}
+.about-copy>p:not(.eyebrow){font-size:12px;line-height:1.75}
+.home-theater{min-width:0;width:100%;display:grid;grid-template-columns:minmax(0,1fr) 52px;column-gap:16px;align-items:start}
+.theater-scene{grid-column:1;position:relative;padding:0 74px 114px;background:radial-gradient(ellipse at 50% 76%,#5a3e212a,transparent 70%);isolation:isolate}
+.theater-scene::after{content:"";position:absolute;bottom:20px;left:0;right:0;height:48px;background:radial-gradient(ellipse,#b9905426,transparent 70%);z-index:-1}
+.theater-tv{position:relative;padding:0;border:0;border-radius:0;background:#000;box-shadow:0 15px 40px #000a}
+.tv-screen{aspect-ratio:16/9;min-height:200px;background:#000;overflow:hidden;border:0}
 .tv-screen iframe{display:block;width:100%;height:100%;min-height:200px;border:0}
-.tv-bezel{height:18px;display:flex;justify-content:center;align-items:center;position:relative}
-.tv-bezel span{font-size:5px;letter-spacing:.22em;color:#8e8677}.tv-bezel i{position:absolute;right:12px;width:3px;height:3px;border-radius:50%;background:#cd4545;box-shadow:0 0 5px #cd454566}
-.is-playing .tv-bezel i{background:#8ed3a7;box-shadow:0 0 6px #8ed3a7}
-.tv-stand{position:absolute;top:100%;left:35%;width:30%;height:20px;background:linear-gradient(90deg,#161616,#676359,#181818);clip-path:polygon(38% 0,62% 0,68% 76%,100% 85%,100% 100%,0 100%,0 85%,32% 76%)}
-.theater-speaker{position:absolute;bottom:48px;width:38px;height:162px;background:linear-gradient(90deg,#1d1008,#67452b 12%,#291c12 20%,#141413 23%,#10100f 85%,#5d3d24 89%,#25160d);border:1px solid #77563766;border-radius:3px;box-shadow:4px 8px 15px #0008;padding-top:12px}
-.theater-speaker-left{left:2px}.theater-speaker-right{right:2px}
-.speaker-tweeter{width:12px;height:12px;margin:0 auto 12px;border-radius:50%;background:radial-gradient(circle,#333 10%,#0a0a0a 40%,#888 48%,#171717 57%)}
-.theater-driver{width:29px;height:29px;margin:8px auto;border-radius:50%;background:radial-gradient(circle at 40% 35%,#777 0,#222 18%,#080808 24%,#343434 30%,#181818 57%,#060606 62%,#60605b 66%,#171717 73%,#444 78%,#121212 82%);box-shadow:0 1px 3px #000}
-.speaker-foot{position:absolute;bottom:-4px;left:-3px;width:42px;height:4px;background:linear-gradient(#60574b,#131313);border-radius:2px}
-.theater-waves{position:absolute;left:50%;top:42%;width:0;height:0;pointer-events:none}
+.theater-speaker{position:absolute;bottom:32px;width:72px;height:210px;filter:drop-shadow(3px 8px 8px #0008)}
+.theater-speaker img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.theater-speaker-left{left:0}.theater-speaker-right{right:0}
+.theater-waves{position:absolute;left:50%;top:50%;width:0;height:0;pointer-events:none}
 .theater-waves i{position:absolute;left:-22px;top:-22px;width:44px;height:44px;border:1px solid #ebc18188;border-radius:50%;opacity:0;box-shadow:0 0 8px #ebc18144}
 .is-playing .theater-waves i{animation:theater-sound 1.95s ease-out infinite}
 @keyframes theater-sound{0%{transform:scale(.6);opacity:0}18%{opacity:.7}100%{transform:scale(3.2);opacity:0}}
-.theater-console{position:absolute;bottom:34px;left:27%;width:46%;height:50px}
-.center-speaker{height:20px;display:flex;align-items:center;justify-content:space-evenly;margin:0 12% 5px;background:linear-gradient(#302820,#10100e);border:1px solid #675035;border-radius:2px}
-.center-speaker i{width:13px;height:13px;border-radius:50%;background:radial-gradient(#060606 20%,#3b3b38 35%,#171717 65%,#6c665c 70%,#131313 80%)}
-.theater-receiver{height:22px;display:flex;align-items:center;justify-content:space-between;padding:0 8px;border:1px solid #544c3f;background:linear-gradient(#45413a,#171715);border-radius:2px;box-shadow:0 5px 8px #0008}
+.theater-console{position:absolute;bottom:28px;left:28%;width:44%;height:77px}
+.center-speaker{height:46px;margin:0 auto 7px;width:70%;filter:drop-shadow(2px 4px 5px #0008)}
+.center-speaker img{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.theater-receiver{height:23px;display:flex;align-items:center;justify-content:space-between;padding:0 8px;border:1px solid #544c3f;background:linear-gradient(#45413a,#171715);border-radius:2px;box-shadow:0 5px 8px #0008}
 .theater-receiver i{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,#777,#181818);border:1px solid #817b6b}.theater-receiver span{font-size:5px;letter-spacing:.08em;color:#c4a165;background:#060606;padding:3px 8px}
-.console-shelf{position:absolute;bottom:-5px;left:-10%;width:120%;height:5px;background:linear-gradient(#8f7860,#22180f);box-shadow:0 4px 8px #000}
-.theater-subwoofer{position:absolute;bottom:28px;right:12%;width:52px;height:57px;padding-top:2px;background:linear-gradient(135deg,#34302b,#0b0b0a 75%);border:1px solid #524636;border-radius:2px;box-shadow:4px 6px 12px #0008}.theater-subwoofer .theater-driver{width:40px;height:40px}
-.tv-channel-controls{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
-.channel-caption{font-size:8px;letter-spacing:.12em;color:#b4a386;margin-right:4px}
-.tv-channel-controls button{display:flex;align-items:center;gap:5px;padding:9px 11px;background:#16120d;border:1px solid #9b7b4855;border-radius:6px;color:#cbbb9d;font-size:13px;cursor:pointer;transition:background .2s,border-color .2s;min-height:38px}
+.console-shelf{height:5px;margin:3px -10%;background:linear-gradient(#76644b,#19120b);box-shadow:0 7px 10px #0008}
+.theater-subwoofer{position:absolute;bottom:28px;right:11%;width:52px;height:57px;padding-top:2px;background:linear-gradient(135deg,#34302b,#0b0b0a 75%);border:1px solid #524636;border-radius:2px;box-shadow:4px 6px 12px #0008}
+.theater-driver{width:40px;height:40px;margin:6px auto;border-radius:50%;background:radial-gradient(circle at 40% 35%,#777 0,#222 18%,#080808 24%,#343434 30%,#181818 57%,#060606 62%,#60605b 66%,#171717 73%,#444 78%,#121212 82%);box-shadow:0 1px 3px #000}
+.tv-channel-controls{grid-column:2;grid-row:1;display:flex;flex-direction:column;align-items:stretch;gap:8px;padding-top:12px}
+.channel-caption{font-size:7px;letter-spacing:.12em;color:#a59882;text-align:center;line-height:1.6;margin-bottom:3px}
+.tv-channel-controls button{display:flex;align-items:center;justify-content:center;gap:5px;padding:10px 5px;background:#16120d;border:1px solid #9b7b4855;border-radius:5px;color:#cbbb9d;font-size:13px;cursor:pointer;transition:background .2s,border-color .2s;min-height:40px}
 .tv-channel-controls button small{font-size:7px}.tv-channel-controls button[aria-pressed=true]{background:#6f512b;color:#fff0d3;border-color:#c4a165;box-shadow:0 0 14px #bd955322}
 .tv-channel-controls button:hover{border-color:#ead1a1}.tv-channel-controls button:disabled{opacity:.55;cursor:wait}.tv-channel-controls button:focus-visible{outline:2px solid #ead1a1;outline-offset:3px}
-.tv-status{text-align:center;color:#b1a187;font-size:10px;margin:12px 0 0;min-height:14px}
-@media(max-width:540px){.theater-scene{padding-inline:36px}.theater-speaker{width:28px;height:132px}.theater-driver{width:23px;height:23px}.speaker-foot{width:32px}.theater-subwoofer{right:11%;width:40px;height:46px}.theater-subwoofer .theater-driver{width:31px;height:31px}.channel-caption{flex-basis:100%;text-align:center;margin:0}.tv-channel-controls{gap:7px}.tv-channel-controls button{padding:9px 10px}}
+.theater-brand{grid-column:1;text-align:center;font-size:9px;letter-spacing:.25em;color:#bfb3a0;margin:0}.theater-brand span{font-size:7px;color:#93846d;letter-spacing:.18em;margin-left:7px}
+.tv-status{grid-column:1;text-align:center;color:#b1a187;font-size:10px;margin:8px 0 0;min-height:14px}
+@media(max-width:900px){.about{grid-template-columns:1fr;gap:22px;padding-block:32px}.about-copy{max-width:540px}.about-copy h2{font-size:clamp(32px,5vw,44px)}.home-theater{max-width:950px;margin-inline:auto}}
+@media(max-width:540px){.home-theater{grid-template-columns:minmax(0,1fr) 42px;column-gap:8px}.theater-scene{padding:0 36px 94px}.theater-speaker{width:36px;height:110px;bottom:30px}.theater-console{left:25%;width:50%;height:60px;bottom:24px}.center-speaker{height:34px;width:85%;margin-bottom:4px}.theater-receiver{height:18px;padding-inline:4px}.theater-receiver i{width:8px;height:8px}.theater-receiver span{font-size:4px;padding:2px}.theater-subwoofer{right:10%;bottom:24px;width:30px;height:36px}.theater-subwoofer .theater-driver{width:23px;height:23px;margin-top:4px}.tv-channel-controls{gap:6px;padding-top:0}.tv-channel-controls button{min-height:33px;padding:7px 2px;font-size:11px}.channel-caption{font-size:6px}.theater-brand{font-size:7px;letter-spacing:.15em}.theater-brand span{font-size:6px;margin-left:3px}.tv-status{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.is-playing .theater-waves i{animation:none;opacity:.35;transform:scale(1.3)}.tv-channel-controls button{transition:none}}
