@@ -23,3 +23,5 @@ export type NavigationItem = { slug: string; label: string; href: string; sort_o
 export type MarketingCard = { slug: string; name: string; brand?: string; description: string; image_url: string };
 export type MarketingContent = { promotions: MarketingCard[]; highlights: MarketingCard[] };
 export type HomeContent = { settings: HomeSettings; brands: Brand[]; categories: Category[]; navigation: NavigationItem[]; marketing: MarketingContent };
+
+export type ContactChannel = { id: string; label: string; detail: string; href: string };

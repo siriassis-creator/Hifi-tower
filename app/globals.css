@@ -100,3 +100,26 @@ header{position:fixed;z-index:50;padding-inline:var(--page-gutter);grid-template
 @media(max-width:900px){:root{--header-height:72px}header{padding-inline:var(--page-gutter)}.logo{width:auto}.highlight-card{width:calc((100cqw - 16px)/2)}.promotion-card{height:calc((100cqw - 12px)*.2333333)}.marketing-section{padding-bottom:36px}.about{padding-inline:var(--page-gutter)}}
 @media(max-width:540px){.promotion-grid{grid-template-columns:1fr;gap:14px}.promotion-card{height:auto;aspect-ratio:3/1}.highlight-card{width:78cqw}.highlight-copy{min-height:165px}.highlight-heading{align-items:start}.scroll-control{padding:8px 10px;font-size:11px}.section-heading{margin-bottom:22px}}
 @media(prefers-reduced-motion:reduce){.highlight-track{animation:none}.highlight-window{overflow-x:auto}.highlight-group[aria-hidden=true]{display:none}.promotion-card img,.highlight-card img{transition:none}}
+
+/* Muted amber and charcoal grade, matched to the speaker category. */
+.promotion-card img,.highlight-image img{filter:brightness(.72) saturate(.5);transition:filter .45s ease,transform .65s ease}
+.promotion-card:hover img,.highlight-card:hover img{filter:brightness(.86) saturate(.6)}
+.site-footer{padding:0 var(--page-gutter) 28px;background:#080603}
+.footer-rule{height:1px;background:linear-gradient(90deg,#ad884e77,#ad884e25);margin-bottom:24px}
+.footer-brands{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px 24px;padding:0 0 28px}
+.footer-brand{display:block;width:115px;height:55px;flex:none;background-image:url('/images/footer/brand-partners.png');background-size:630.5px 141.5px;background-repeat:no-repeat;filter:grayscale(1) invert(1) brightness(.8) sepia(.2);mix-blend-mode:screen;opacity:.75;transition:opacity .25s}
+.footer-brand:hover{opacity:1}
+.footer-bottom{display:flex;align-items:center;gap:24px;padding-top:20px;border-top:1px solid #ffffff0d;color:#a99e8a}
+.footer-name{font:400 22px Georgia,serif;color:#d0aa6b}.footer-bottom p{margin:0;font-size:11px}.footer-bottom small{margin-left:auto;font-size:10px;letter-spacing:.04em}
+.contact-widget{position:fixed;z-index:70;right:max(24px,env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.contact-toggle{position:relative;display:flex;align-items:center;gap:12px;background:#17110b;border:1px solid #ad884e;color:#ead7b2;border-radius:32px;padding:15px 22px;box-shadow:0 8px 36px #0007;cursor:pointer;font-size:13px;transition:background .25s,transform .25s}
+.contact-toggle:hover{background:#2c2013;transform:translateY(-2px)}.contact-toggle svg{width:24px;height:24px}.contact-status{width:6px;height:6px;background:#d0aa6b;border-radius:50%;box-shadow:0 0 9px #d0aa6b66}
+.contact-panel{width:min(330px,calc(100vw - 40px));padding:24px 20px 18px;background:#100c08f7;backdrop-filter:blur(20px);border:1px solid #ad884e66;border-radius:18px;box-shadow:0 18px 60px #0009;opacity:0;visibility:hidden;transform:translateY(24px);transition:opacity .3s,transform .35s,visibility .3s;max-height:calc(100dvh - 140px);overflow-y:auto}
+.contact-panel.is-open{opacity:1;visibility:visible;transform:translateY(0)}
+.contact-panel-heading{display:flex;justify-content:space-between;align-items:flex-start}.contact-panel-heading span{color:#d0aa6b;font:400 14px Georgia,serif}.contact-panel-heading h2{margin:7px 0 0;font-size:22px;font-weight:400;color:#f3eee5}.contact-panel-heading button{border:0;background:transparent;color:#bfae92;cursor:pointer;font-size:26px;padding:0 4px}
+.contact-intro{font-size:12px;color:#a99e8a;margin:12px 0 18px}
+.contact-channels{display:grid;gap:8px}.contact-channels>a{display:flex;align-items:center;gap:12px;padding:12px 10px;border:1px solid #ffffff0d;background:#ffffff03;border-radius:10px;transition:border-color .2s,background .2s}
+.contact-channels>a:hover{background:#ad884e13;border-color:#ad884e66}.channel-icon{display:flex;width:36px;height:36px;flex:none}.channel-icon svg{width:100%;height:100%}.contact-channels b{display:block;font-size:13px;font-weight:400;color:#f3eee5}.contact-channels small{display:block;font-size:10px;margin-top:5px;color:#b3a58f}.channel-arrow{margin-left:auto;color:#ad884e}
+@media(max-width:900px){.footer-brands{justify-content:center;gap:16px 30px}.footer-bottom{flex-wrap:wrap;gap:12px 22px}.footer-bottom small{margin-left:0}.site-footer{padding-bottom:100px}}
+@media(max-width:540px){.footer-brands{display:grid;grid-template-columns:repeat(2,115px);justify-content:space-around}.footer-bottom{align-items:flex-start;flex-direction:column}.contact-widget{right:18px;bottom:calc(18px + env(safe-area-inset-bottom))}.contact-toggle{padding:13px 18px}.contact-panel{padding:22px 18px}}
+@media(prefers-reduced-motion:reduce){.contact-panel,.contact-toggle,.footer-brand,.promotion-card img,.highlight-image img{transition:none}}

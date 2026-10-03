@@ -1,12 +1,14 @@
+import ContactChat from "./contact-chat";
 import Image from "next/image";
 import Highlights from "./highlights";
 import Navigation from "./navigation";
-import { getHomeContent, imageBackground, safeHref } from "../lib/content";
+import { getContactChannels, getHomeContent, imageBackground, safeHref } from "../lib/content";
 
 export const revalidate = 60;
 
 export default async function Home() {
-  const { settings: home, categories, navigation, marketing } = await getHomeContent();
+  const [content, channels] = await Promise.all([getHomeContent(), getContactChannels()]);
+  const { settings: home, categories, navigation, marketing } = content;
   return (
     <main>
       <header>
@@ -52,6 +54,12 @@ export default async function Home() {
         <p>{home.about_description}</p>
         <a className="outline" href={safeHref(home.about_cta_url)}>{home.about_cta_label}　→</a>
       </section>
+      <footer className="site-footer">
+        <div className="footer-rule" />
+        <div className="footer-brands" aria-label="Our audio brands">{["WHARFEDALE", "audiolab", "MISSION", "SINE", "ATLAS", "QUAD", "LEAK", "MAGNETAR"].map((brand, index) => <span className="footer-brand" key={brand} role="img" aria-label={brand} style={{ backgroundPosition: `${-15.5 - (index < 5 ? index : index - 5) * 117}px ${index < 5 ? -14.5 : -71.5}px` }} />)}</div>
+        <div className="footer-bottom"><a href="#" className="footer-name">HiFi Tower</a><p>ครบ จบ คุ้ม ที่ HiFi Tower</p><small>© {new Date().getFullYear()} HiFi Tower</small></div>
+      </footer>
+      <ContactChat channels={channels} />
     </main>
   );
 }

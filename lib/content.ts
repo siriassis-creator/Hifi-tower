@@ -1,6 +1,7 @@
 import { defaults } from "./default-content";
 import { publicSupabase } from "./supabase-config";
-import type { HomeContent } from "./content-types";
+import { contactChannels } from "./contact-channels";
+import type { ContactChannel, HomeContent } from "./content-types";
 
 const baseUrl = process.env.SUPABASE_URL || publicSupabase.url;
 const publicKey = process.env.SUPABASE_PUBLISHABLE_KEY || publicSupabase.publishableKey;
@@ -49,4 +50,13 @@ export function imageBackground(value: string): string | undefined {
     const url = new URL(value);
     return url.protocol === "https:" ? `url(${JSON.stringify(url.href)})` : undefined;
   } catch { return undefined; }
+}
+
+export async function getContactChannels(): Promise<ContactChannel[]> {
+  try {
+    const pages = await read<{ content: { channels: ContactChannel[] } }>("hifi_pages", "select=content&slug=eq.contact-channels&published=eq.true");
+    const channels = pages[0]?.content.channels;
+    if (!Array.isArray(channels) || channels.length !== 4) return contactChannels;
+    return channels.map(channel => ({ ...channel, href: /^(https:\/\/|mailto:|tel:)/i.test(channel.href) ? channel.href : "#" }));
+  } catch { return contactChannels; }
 }
