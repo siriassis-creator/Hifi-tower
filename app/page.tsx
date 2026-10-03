@@ -13,12 +13,12 @@ export default async function Home() {
       </header>
       <section className="hero">
         <div className="heroPhoto" style={{ backgroundImage: imageBackground(home.hero_image_url) }} aria-hidden="true" />
-        <svg className="hero-waves" viewBox="0 0 1672 941" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+        <svg className="hero-waves" viewBox="0 0 1676 939" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
           <defs><radialGradient id="sound-glow"><stop offset="0" stopColor="#f5bc60" stopOpacity=".35" /><stop offset="1" stopColor="#d59a43" stopOpacity="0" /></radialGradient></defs>
-          {[{ x: 758, y: 392 }, { x: 1345, y: 390 }].map((speaker, index) => (
+          {[{ x: 1190, y: 434 }, { x: 1295, y: 430 }].map((speaker, index) => (
             <g key={index}>
               <circle className="speaker-glow" cx={speaker.x} cy={speaker.y} r="145" fill="url(#sound-glow)" />
-              {[0, 1, 2].map(ring => <circle key={ring} className="sound-ring" cx={speaker.x} cy={speaker.y} r="66" style={{ animationDelay: `${ring * 2 + index * .6}s` }} />)}
+              {[0, 1, 2].map(ring => <circle key={ring} className="sound-ring" cx={speaker.x} cy={speaker.y} r="42" style={{ animationDelay: `${ring * 2 + index * .6}s` }} />)}
             </g>
           ))}
         </svg>

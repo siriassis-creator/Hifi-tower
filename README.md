@@ -80,3 +80,8 @@ CSS animates warm light fading and SVG sound rings aligned to the speaker
 drivers; reduced-motion preferences disable animation. HiFi Tower identity
 replaces the collection button, and category introduction uses left-aligned
 white/gold typography. See `docs/showroom-image-prompt.md` for generation details.
+
+The current hero is `public/images/hero/original-room-v3.webp`. It returns to
+the original room photo and oblique camera angle, preserving the library,
+chairs, tables and warm amber lighting while updating speaker cabinet designs.
+Sound rings are repositioned to the large speakers by the bookcase.
