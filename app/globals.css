@@ -19,3 +19,25 @@
 .category-label{position:absolute;z-index:1;left:24px;right:24px;bottom:22px;margin:0;color:#fff;font:400 clamp(18px,1.6vw,25px)/1.2 Georgia,serif;letter-spacing:.06em;text-shadow:0 2px 10px #000}
 @media(max-width:900px){.hero aside{max-width:300px}.category-intro{padding-top:28px}}
 @media(max-width:540px){.hero aside{max-width:250px}.hero aside .featured-title{font-size:21px}.hero aside span{font-size:12px}.category-intro p{font-size:12px}.category-label{font-size:22px}}
+
+/* Cinematic showroom: photograph and speaker effects share the same crop. */
+.hero{height:clamp(750px,56.25vw,900px);isolation:isolate}
+.heroPhoto{inset:0;background-position:center;transform:none;filter:brightness(.9) saturate(.9);animation:showroom-lights 12s ease-in-out infinite}
+.hero-waves{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:hidden}
+.sound-ring{fill:none;stroke:#e7b96b;stroke-width:1.2;vector-effect:non-scaling-stroke;transform-box:fill-box;transform-origin:center;opacity:0;animation:sound-expand 6s ease-out infinite;filter:drop-shadow(0 0 4px #dca44b)}
+.speaker-glow{opacity:.2;animation:speaker-light 6s ease-in-out infinite}
+.showroom-light{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 67% 23%,#e7ad4433,transparent 53%);opacity:0;animation:speaker-light 12s ease-in-out infinite}
+.veil{background:linear-gradient(90deg,#080603f5 0%,#080603de 28%,#08060360 41%,transparent 58%),linear-gradient(0deg,#08060370,transparent 35%);pointer-events:none}
+.hero-identity{margin-top:24px;max-width:370px;border-left:1px solid #ad884e;padding-left:18px}
+.hero-identity .featured-title{display:inline-block;font:400 27px/1.2 Georgia,serif;color:#d0aa6b;transition:color .25s}
+.hero-identity .featured-title:hover{color:#f3eee5}
+.hero-identity p{margin:9px 0 0;color:#f3eee5;font-size:13px;line-height:1.7}
+.category-intro{text-align:left;padding:38px 18px 0}
+.category-intro h2{color:#f3eee5}.category-intro h2 span{color:#d0aa6b}
+.category-intro p{color:#f3eee5}.category-intro p span{color:#d0aa6b}
+@keyframes showroom-lights{0%,100%{filter:brightness(.4) saturate(.85)}35%,70%{filter:brightness(.95) saturate(.95)}}
+@keyframes sound-expand{0%{transform:scale(.35);opacity:0}15%{opacity:.55}100%{transform:scale(3.7);opacity:0}}
+@keyframes speaker-light{0%,100%{opacity:.05}50%{opacity:.6}}
+@media(max-width:900px){.hero{height:880px}.copy{width:calc(100% - 48px);max-width:500px;top:115px}.copy h1{font-size:clamp(50px,9vw,74px)}.copy>p:not(.eyebrow){max-width:420px}.veil{background:linear-gradient(90deg,#080603e6,#0806039e 60%,#08060322),linear-gradient(0deg,#080603b3,transparent 30%)}.hero-identity{max-width:340px}}
+@media(max-width:540px){.hero{height:900px}.copy h1{font-size:clamp(46px,12vw,64px)}.copy>p:not(.eyebrow){max-width:100%;font-size:12px}.hero-identity p{font-size:12px}.hero-identity .featured-title{font-size:25px}.category-intro{padding-inline:18px}}
+@media(prefers-reduced-motion:reduce){.heroPhoto,.sound-ring,.speaker-glow,.showroom-light{animation:none}.heroPhoto{filter:brightness(.9) saturate(.9)}.sound-ring{opacity:0}.speaker-glow{opacity:.2}.showroom-light{opacity:.15}}

@@ -1,0 +1,9 @@
+# Showroom hero
+
+Generated with the built-in image generation tool.
+
+Saved asset: `public/images/hero/showroom-v2.webp`.
+
+Prompt:
+
+Use case: compositing. Asset type: premium HiFi Tower website hero background, panoramic landscape 16:9. Reference images in order: 1 black AMP with three dials and amber waveform display, 2 silver DAC with black display and large silver dial, 3 silver cube subwoofer with black driver, 4 walnut speakers with polished silver driver trim. Recreate those same distinctive products together, consistent scale and perspective, in an extraordinary photorealistic world-class high-end listening showroom. Two walnut floorstanding speakers form a symmetrical stereo pair at image coordinates approximately x=48% and x=84%, their main midwoofer centers around y=56%. Between them a low premium isolated black rack with the recognizable black amp and silver DAC; silver cube subwoofer near the right speaker. Elegant dark walnut slatted acoustic diffusion wall, charcoal fabric acoustic panels and bass traps, floating ceiling with recessed warm amber lighting, subtle gold LED floor strips, plush wool listening rug, partial cognac leather listening chair in foreground right. Luxurious restrained architecture, immaculate cable management, correct product physics, gallery-like composition. Left 35% of image should be dark uncluttered wall with negative space for website text; equipment concentrated in right 65%, all key products fully visible. Warm amber spotlight pools on equipment, deep black, brown walnut and champagne gold, no white daylight. Photorealistic architectural product photography, cinematic depth, sophisticated rather than sci-fi. No text, no labels, no UI, no watermark, no visual sound waves baked into the photograph (they will be animated in code). Wide composition, balanced equipment silhouettes, eye-level view.

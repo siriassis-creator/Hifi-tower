@@ -72,3 +72,11 @@ uploads and then disabled (returns HTTP 410). Future uploads use the dashboard.
 
 The existing Vercel project is linked to this repository's `main` branch.
 Pushing a verified commit triggers its normal deployment workflow.
+
+The hero uses `public/images/hero/showroom-v2.webp`, a generated showroom
+composite based on the four approved AMP, DAC, Subwoofer and Speaker panels.
+The same asset is stored in Supabase `hifi-media/backgrounds/showroom-v2.webp`.
+CSS animates warm light fading and SVG sound rings aligned to the speaker
+drivers; reduced-motion preferences disable animation. HiFi Tower identity
+replaces the collection button, and category introduction uses left-aligned
+white/gold typography. See `docs/showroom-image-prompt.md` for generation details.
