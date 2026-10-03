@@ -22,12 +22,11 @@ export default function ContactChat({ channels }: { channels: ContactChannel[] }
     document.addEventListener("keydown", closeEscape);
     return () => { document.removeEventListener("pointerdown", closeOutside); document.removeEventListener("keydown", closeEscape); };
   }, [open]);
-  return <div className="contact-widget" ref={wrapper}>
+  return <div className={`contact-widget${open ? " is-open" : ""}`} ref={wrapper}>
     <div className={`contact-panel${open ? " is-open" : ""}`} id="contact-panel" role="dialog" aria-labelledby="contact-title" inert={!open} aria-hidden={!open}>
-      <div className="contact-panel-heading"><div><span>HiFi Tower</span><h2 id="contact-title">คุยกับเรา</h2></div><button onClick={() => {setOpen(false);toggle.current?.focus();}} aria-label="ปิดช่องทางติดต่อ">×</button></div>
-      <p className="contact-intro">เลือกช่องทางที่สะดวกสำหรับคุณ</p>
-      <div className="contact-channels">{channels.map(channel => <a key={channel.id} href={channel.href} target={channel.id === "facebook" || channel.id === "line" ? "_blank" : undefined} rel={channel.id === "facebook" || channel.id === "line" ? "noopener noreferrer" : undefined}><span className="channel-icon"><ChannelIcon name={channel.id} /></span><span><b>{channel.label}</b><small>{channel.detail}</small></span><span className="channel-arrow" aria-hidden="true">↗</span></a>)}</div>
+      <h2 id="contact-title" className="contact-command-title">คุยกับเรา</h2>
+      <div className="contact-channels">{channels.map(channel => <a key={channel.id} href={channel.href} target={channel.id === "facebook" || channel.id === "line" ? "_blank" : undefined} rel={channel.id === "facebook" || channel.id === "line" ? "noopener noreferrer" : undefined}><span className="channel-icon"><ChannelIcon name={channel.id} /></span><span><b>{channel.label}</b><small>{channel.detail}</small></span></a>)}</div>
     </div>
-    <button ref={toggle} className="contact-toggle" onClick={() => setOpen(value => !value)} aria-expanded={open} aria-controls="contact-panel"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M20 11a8 8 0 0 1-8 8H8l-5 3 1.4-5A8 8 0 1 1 20 11Z" /><path d="M7 10h10M7 14h6" /></svg><span>ติดต่อเรา</span><span className="contact-status" aria-hidden="true" /></button>
+    <button ref={toggle} className="contact-toggle" onClick={() => setOpen(value => !value)} aria-label={open ? "ปิดช่องทางติดต่อ" : "ติดต่อเรา"} aria-expanded={open} aria-controls="contact-panel"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M20 11a8 8 0 0 1-8 8H8l-5 3 1.4-5A8 8 0 1 1 20 11Z" /><path d="M7 10h10M7 14h6" /></svg><span className="contact-toggle-label">ติดต่อเรา</span><span className="contact-close-symbol" aria-hidden="true">×</span></button>
   </div>;
 }

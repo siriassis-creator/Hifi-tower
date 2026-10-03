@@ -49,10 +49,11 @@ export default async function Home() {
       </section>
       <Highlights items={marketing.highlights} />
       <section className="about" id="about">
-        <p className="eyebrow">{home.about_eyebrow}</p>
+        <div className="about-copy"><p className="eyebrow">{home.about_eyebrow}</p>
         <h2>{home.about_title}<br /><em>{home.about_highlight}</em></h2>
         <p>{home.about_description}</p>
-        <a className="outline" href={safeHref(home.about_cta_url)}>{home.about_cta_label}　→</a>
+        <a className="outline" href={safeHref(home.about_cta_url)}>{home.about_cta_label}　→</a></div>
+        <div className="about-video"><iframe src="https://www.youtube-nocookie.com/embed/bvf1FVVLA60" title="HiFi Tower video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div>
       </section>
       <footer className="site-footer">
         <div className="footer-rule" />
