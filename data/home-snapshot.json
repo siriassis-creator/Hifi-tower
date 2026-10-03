@@ -206,13 +206,13 @@
         "slug": "promotion-home",
         "name": "Recommended Home Theater",
         "description": "ชุดเครื่องเสียงโฮมเธียเตอร์",
-        "image_url": "https://hifi-tower.vercel.app/images/marketing/promotion-home-v2.webp"
+        "image_url": "https://hifi-tower.vercel.app/images/marketing/promotion-home-v3.webp"
       },
       {
         "slug": "promotion-speakers",
         "name": "Recommended Loudspeaker",
         "description": "ลำโพงที่เราแนะนำ",
-        "image_url": "https://hifi-tower.vercel.app/images/marketing/promotion-speakers-v2.webp"
+        "image_url": "https://hifi-tower.vercel.app/images/marketing/promotion-speakers-v3.webp"
       }
     ],
     "highlights": [

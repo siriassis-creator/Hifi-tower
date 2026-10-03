@@ -76,5 +76,10 @@
       "file": "public/images/marketing/sine-v3.webp",
       "brief": "rightmost SINE tile. Preserve EXACT fan arrangement of disconnected banana connector plugs: SILVER plugs cluster LEFT and GOLD plugs cluster RIGHT, NO attached cables, same original orientation and object arrangement. Preserve BLUE SINE logo at top left."
     }
-  ]
+  ],
+  "original_reference_promotions": {
+    "method": "built-in image_gen",
+    "reference": "image(20261003-184534).png",
+    "brief": "Preserve original home theater and loudspeaker products, composition, HiFi Tower logo, Recommended headline, Shop Now and award badges; replace turquoise details with muted amber and charcoal category lighting."
+  }
 }
