@@ -1,3 +1,4 @@
+import Navigation from "./navigation";
 import { getHomeContent, imageBackground, safeHref } from "../lib/content";
 
 export const revalidate = 60;
@@ -8,7 +9,7 @@ export default async function Home() {
     <main>
       <header>
         <a className="logo" href="#"><span>▥</span><b>HIFI TOWER</b><small>BANGKOK</small></a>
-        <nav>{navigation.map(item => <a key={item.slug} className={item.slug === "home" ? "active" : undefined} href={safeHref(item.href)}>{item.label}</a>)}</nav>
+        <Navigation items={navigation.map(item => ({ ...item, href: safeHref(item.href) }))} categories={categories} />
         <div className="icons">⌕　♙　▱　 <small>TH | EN</small></div>
       </header>
       <section className="hero">
