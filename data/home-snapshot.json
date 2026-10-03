@@ -221,56 +221,56 @@
         "name": "LEAK Stereo 230",
         "brand": "LEAK",
         "description": "Integrated amplifier",
-        "image_url": "https://hifi-tower.vercel.app/images/marketing/leak-v2.webp"
+        "image_url": "https://hifi-tower.vercel.app/images/marketing/leak-v3.webp"
       },
       {
         "slug": "dc-block",
         "name": "audiolab DC Block",
         "brand": "audiolab",
         "description": "Designed to improve the quality of AC electricity for audio and AV systems.",
-        "image_url": "https://hifi-tower.vercel.app/images/marketing/dc-block-v2.webp"
+        "image_url": "https://hifi-tower.vercel.app/images/marketing/dc-block-v3.webp"
       },
       {
         "slug": "aura",
         "name": "Wharfedale AURA Series",
         "brand": "WHARFEDALE",
         "description": "Wharfedale AURA Series",
-        "image_url": "https://hifi-tower.vercel.app/images/marketing/aura-v2.webp"
+        "image_url": "https://hifi-tower.vercel.app/images/marketing/aura-v3.webp"
       },
       {
         "slug": "mission",
         "name": "Mission LX MK II Series & Integrated Amplifier Mission 778X",
         "brand": "MISSION",
         "description": "Speakers and integrated amplifier",
-        "image_url": "https://hifi-tower.vercel.app/images/marketing/mission-v2.webp"
+        "image_url": "https://hifi-tower.vercel.app/images/marketing/mission-v3.webp"
       },
       {
         "slug": "sw",
         "name": "Wharfedale SW Series",
         "brand": "WHARFEDALE",
         "description": "Subwoofers for home cinema",
-        "image_url": "https://hifi-tower.vercel.app/images/marketing/sw-v2.webp"
+        "image_url": "https://hifi-tower.vercel.app/images/marketing/sw-v3.webp"
       },
       {
         "slug": "magnetar",
         "name": "Magnetar UDP800 4K UHD Blu-Ray Player",
         "brand": "MAGNETAR",
         "description": "4K UHD Blu-Ray Player",
-        "image_url": "https://hifi-tower.vercel.app/images/marketing/magnetar-v2.webp"
+        "image_url": "https://hifi-tower.vercel.app/images/marketing/magnetar-v3.webp"
       },
       {
         "slug": "7000a",
         "name": "audiolab 7000A",
         "brand": "audiolab",
         "description": "Integrated amplifier",
-        "image_url": "https://hifi-tower.vercel.app/images/marketing/7000a-v2.webp"
+        "image_url": "https://hifi-tower.vercel.app/images/marketing/7000a-v3.webp"
       },
       {
         "slug": "sine",
         "name": "SINE Banana Gold / Platinum",
         "brand": "SINE",
         "description": "Speaker cable banana plugs in Gold / Platinum",
-        "image_url": "https://hifi-tower.vercel.app/images/marketing/sine-v2.webp"
+        "image_url": "https://hifi-tower.vercel.app/images/marketing/sine-v3.webp"
       }
     ]
   }
