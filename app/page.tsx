@@ -24,14 +24,10 @@ export default async function Home() {
         <aside><b>{home.featured_brand}</b><span>{home.featured_series}</span><a href={safeHref(home.featured_url)}><u>Discover　→</u></a></aside>
       </section>
       <section className="brandbar" id="brands">{brands.map(brand => <strong key={brand.slug}>{brand.name}</strong>)}</section>
-      <section className="cards" id="products">{categories.map((category, index) => (
-        <a key={category.slug} className={`card c${index}${category.image_crop ? " card--artwork" : ""}`} href={safeHref(category.href)} aria-label={`${category.name}: ${category.description}`}>
-          {category.image_crop ? (
-            <svg className="category-artwork" viewBox={`${category.image_crop.x} ${category.image_crop.y} ${category.image_crop.width} ${category.image_crop.height}`} width={category.image_crop.width} height={category.image_crop.height} aria-hidden="true" focusable="false">
-              <image href={category.image_url} width="2048" height="691" />
-            </svg>
-          ) : <><div className="pic" style={{ backgroundImage: imageBackground(category.image_url) }} /><div className="dark" /><div className="ct"><h2>{category.name}</h2><p>{category.description}</p><i>→</i></div></>}
-        </a>
+      <section className="cards" id="products" aria-label="Product categories">{categories.map(category => (
+        <div key={category.slug} className="card" role="img" aria-label={`${category.name}: ${category.description}`}>
+          <div className="pic" style={{ backgroundImage: imageBackground(category.image_url) }} />
+        </div>
       ))}</section>
       <section className="about" id="about">
         <p className="eyebrow">{home.about_eyebrow}</p>

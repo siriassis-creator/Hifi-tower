@@ -41,10 +41,15 @@ logs whenever it uses this fallback. Optional deployment overrides are described
 in `.env.example`. `lib/supabase-config.ts` contains a **publishable** key only,
 never a service-role/secret key. RLS controls all public access.
 
-The category artwork is the exact user-provided PNG, uploaded unchanged. SVG
-viewports display its four panels without generating new imagery or drawing
-labels over the embedded labels. Set `image_crop` to null for a regular image.
-For this artwork, crop coordinates use the original 2048 × 691 pixel canvas.
+The category section displays six standalone 3:2 images in three columns and two
+rows on desktop (two columns on tablet, one on mobile). Four approved product
+images were cleaned to remove embedded labels and arrows; Subwoofer and DAC
+were generated using the legacy six-category screenshot and matching amber/black
+lighting. WebP originals are versioned in `public/images/categories` and served
+from Supabase `hifi-media/categories/*-v2.webp`. Cards preserve the approved
+hover zoom and brightness effect, carry accessible category descriptions, and
+have no visible text or destination links while the structure is being approved.
+The Sources panel retains the approved turntable image for CD / Sources.
 
 ## Migration scope
 
