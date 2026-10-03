@@ -58,7 +58,6 @@ export default async function Home() {
       <footer className="site-footer">
         <div className="footer-rule" />
         <div className="footer-brands" aria-label="Our audio brands">{["WHARFEDALE", "audiolab", "MISSION", "SINE", "ATLAS", "QUAD", "LEAK", "MAGNETAR"].map((brand, index) => <span className="footer-brand" key={brand} role="img" aria-label={brand} style={{ backgroundPosition: `${-15.5 - (index < 5 ? index : index - 5) * 117}px ${index < 5 ? -14.5 : -71.5}px` }} />)}</div>
-        <div className="footer-bottom"><a href="#" className="footer-name">HiFi Tower</a><p>ครบ จบ คุ้ม ที่ HiFi Tower</p><small>© {new Date().getFullYear()} HiFi Tower</small></div>
       </footer>
       <ContactChat channels={channels} />
     </main>
