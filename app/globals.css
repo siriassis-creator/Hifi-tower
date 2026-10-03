@@ -212,5 +212,13 @@ header{position:fixed;z-index:50;padding-inline:var(--page-gutter);grid-template
 .theater-brand{grid-column:1;text-align:center;font-size:9px;letter-spacing:.25em;color:#bfb3a0;margin:0}.theater-brand span{font-size:7px;color:#93846d;letter-spacing:.18em;margin-left:7px}
 .tv-status{grid-column:1;text-align:center;color:#b1a187;font-size:10px;margin:8px 0 0;min-height:14px}
 @media(max-width:900px){.about{grid-template-columns:1fr;gap:22px;padding-block:32px}.about-copy{max-width:540px}.about-copy h2{font-size:clamp(32px,5vw,44px)}.home-theater{max-width:950px;margin-inline:auto}}
-@media(max-width:540px){.home-theater{grid-template-columns:minmax(0,1fr) 42px;column-gap:8px}.theater-scene{padding:0 36px 94px}.theater-speaker{width:36px;height:110px;bottom:30px}.theater-console{left:25%;width:50%;height:60px;bottom:24px}.center-speaker{height:34px;width:85%;margin-bottom:4px}.theater-receiver{height:18px;padding-inline:4px}.theater-receiver i{width:8px;height:8px}.theater-receiver span{font-size:4px;padding:2px}.theater-subwoofer{right:10%;bottom:24px;width:30px;height:36px}.theater-subwoofer .theater-driver{width:23px;height:23px;margin-top:4px}.tv-channel-controls{gap:6px;padding-top:0}.tv-channel-controls button{min-height:33px;padding:7px 2px;font-size:11px}.channel-caption{font-size:6px}.theater-brand{font-size:7px;letter-spacing:.15em}.theater-brand span{font-size:6px;margin-left:3px}.tv-status{font-size:8px}}
+@media(max-width:767px){
+  .home-theater{display:flex;flex-direction:column;max-width:100%;gap:0}
+  .theater-scene{width:100%;padding:3px 3px 5px;margin-bottom:18px;background:none}
+  .theater-scene::after,.theater-speaker,.theater-console,.theater-subwoofer,.theater-brand{display:none}
+  .tv-channel-controls{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));width:100%;gap:8px;padding:0}
+  .channel-caption{grid-column:1/-1;font-size:8px;letter-spacing:.15em;margin:0 0 2px}
+  .tv-channel-controls button{min-width:0;min-height:44px;padding:10px 3px;font-size:12px}
+  .tv-status{width:100%;font-size:10px;margin-top:10px}
+}
 @media(prefers-reduced-motion:reduce){.is-playing .theater-waves i{animation:none;opacity:.35;transform:scale(1.3)}.tv-channel-controls button{transition:none}}
