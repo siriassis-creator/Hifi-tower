@@ -1,16 +1,17 @@
+import Image from "next/image";
+import Highlights from "./highlights";
 import Navigation from "./navigation";
 import { getHomeContent, imageBackground, safeHref } from "../lib/content";
 
 export const revalidate = 60;
 
 export default async function Home() {
-  const { settings: home, categories, navigation } = await getHomeContent();
+  const { settings: home, categories, navigation, marketing } = await getHomeContent();
   return (
     <main>
       <header>
         <a className="logo" href="#"><span>▥</span><b>HIFI TOWER</b><small>BANGKOK</small></a>
         <Navigation items={navigation.map(item => ({ ...item, href: safeHref(item.href) }))} categories={categories} />
-        <div className="icons">⌕　♙　▱　 <small>TH | EN</small></div>
       </header>
       <section className="hero">
         <div className="heroPhoto" style={{ backgroundImage: imageBackground(home.hero_image_url) }} aria-hidden="true" />
@@ -40,6 +41,11 @@ export default async function Home() {
           <h3 className="category-label">{category.name}</h3>
         </div>
       ))}</section>
+      <section className="marketing-section" id="promotions" aria-labelledby="promotion-heading">
+        <div className="section-heading"><h2 id="promotion-heading">Promotion</h2><p>สินค้าโปรโมชั่น</p></div>
+        <div className="promotion-grid">{marketing.promotions.map(item => <article key={item.slug} className="promotion-card"><Image src={item.image_url} alt={item.name} width={2048} height={683} unoptimized /></article>)}</div>
+      </section>
+      <Highlights items={marketing.highlights} />
       <section className="about" id="about">
         <p className="eyebrow">{home.about_eyebrow}</p>
         <h2>{home.about_title}<br /><em>{home.about_highlight}</em></h2>

@@ -20,4 +20,6 @@ export type HomeSettings = {
 export type Brand = { slug: string; name: string; sort_order: number; published: boolean };
 export type Category = { slug: string; name: string; description: string; image_url: string; image_crop?: { x: number; y: number; width: number; height: number } | null; href: string; sort_order: number; published: boolean };
 export type NavigationItem = { slug: string; label: string; href: string; sort_order: number; published: boolean };
-export type HomeContent = { settings: HomeSettings; brands: Brand[]; categories: Category[]; navigation: NavigationItem[] };
+export type MarketingCard = { slug: string; name: string; brand?: string; description: string; image_url: string };
+export type MarketingContent = { promotions: MarketingCard[]; highlights: MarketingCard[] };
+export type HomeContent = { settings: HomeSettings; brands: Brand[]; categories: Category[]; navigation: NavigationItem[]; marketing: MarketingContent };

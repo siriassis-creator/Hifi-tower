@@ -19,14 +19,15 @@ async function read<T>(table: string, query: string): Promise<T[]> {
 
 export async function getHomeContent(): Promise<HomeContent> {
   try {
-    const [settings, brands, categories, navigation] = await Promise.all([
+    const [settings, brands, categories, navigation, marketing] = await Promise.all([
       read<HomeContent["settings"]>("hifi_site_settings", "select=*&id=eq.home"),
       read<HomeContent["brands"][number]>("hifi_brands", "select=slug,name,sort_order,published&published=eq.true&order=sort_order.asc"),
       read<HomeContent["categories"][number]>("hifi_categories", "select=slug,name,description,image_url,image_crop,href,sort_order,published&published=eq.true&order=sort_order.asc"),
       read<HomeContent["navigation"][number]>("hifi_navigation", "select=slug,label,href,sort_order,published&published=eq.true&order=sort_order.asc"),
+      read<{ content: HomeContent["marketing"] }>("hifi_pages", "select=content&slug=eq.home-marketing&published=eq.true").catch(() => []),
     ]);
     if (!settings[0]) throw new Error("Missing HiFi home settings");
-    return { settings: settings[0], brands, categories, navigation };
+    return { settings: settings[0], brands, categories, navigation, marketing: marketing[0]?.content ?? defaults.marketing };
   } catch (error) {
     // Preserve the approved homepage during a temporary database outage.
     console.error("HiFi Tower is using its content snapshot", error instanceof Error ? error.message : "Unknown content error");

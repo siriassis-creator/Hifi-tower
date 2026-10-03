@@ -62,3 +62,41 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #d0
 @media(max-width:1100px){header{height:118px}nav{gap:18px;font-size:11px;justify-content:space-between}}
 @media(max-width:900px){header{height:72px;display:flex;padding:0 20px}.navigation{margin-left:auto;border:0}.icons{margin-left:18px}.menu-toggle{display:block;background:none;border:1px solid #ad884e66;color:#f3eee5;padding:10px 12px;cursor:pointer}nav{display:none;height:auto}nav.is-open{display:flex;position:absolute;left:0;right:0;top:72px;background:#100c07fa;flex-direction:column;align-items:stretch;gap:0;padding:12px 24px;max-height:calc(100dvh - 72px);overflow:auto;border-bottom:1px solid #ad884e66}nav>a,nav summary{padding:13px 0;font-size:14px}.shop-dropdown{position:static;box-shadow:none;margin-bottom:10px}.copy{top:115px}}
 @media(prefers-reduced-motion:reduce){.heroPhoto{animation:none;filter:brightness(.85) saturate(.9)}}
+
+/* One shared left edge for the header, hero and all content sections. */
+:root{--page-gutter:clamp(18px,3vw,60px);--header-height:116px}
+html{scroll-padding-top:calc(var(--header-height) + 20px)}
+header{position:fixed;z-index:50;padding-inline:var(--page-gutter);grid-template-columns:1fr;background:#080603e8;backdrop-filter:blur(16px)}
+.copy{left:var(--page-gutter)}
+.category-intro{padding-inline:var(--page-gutter)}
+.cards{padding-inline:var(--page-gutter)}
+.about{padding-inline:var(--page-gutter)}
+.hero-identity{padding-left:0;border-left:0}
+.marketing-section{padding:14px var(--page-gutter) 52px;background:#080603;scroll-margin-top:20px}
+.section-heading{margin-bottom:28px}
+.section-heading h2{margin:0 0 12px;color:#f3eee5;font:400 clamp(27px,3vw,40px)/1.2 Georgia,serif}
+.section-heading h2 span,.section-heading>h2{color:#d0aa6b}
+.section-heading p{margin:0;font-size:13px;line-height:1.6;color:#d1c7b6}
+.promotion-grid{container-type:inline-size;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.promotion-card{height:calc((100cqw - 28px)*.15555556);overflow:hidden;border:1px solid #8b693a66;background:#100c07}
+.promotion-card img{display:block;width:100%;height:100%;object-fit:contain;transition:filter .4s,transform .65s}
+.promotion-card:hover img{filter:brightness(1.12);transform:scale(1.025)}
+.highlight-heading{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.scroll-control{border:1px solid #ad884e77;color:#d0aa6b;background:transparent;padding:10px 16px;cursor:pointer;font-size:12px;white-space:nowrap}
+.highlight-window{container-type:inline-size;overflow:hidden;outline-offset:6px}
+.highlight-track{display:flex;width:max-content;animation:highlight-scroll 48s linear infinite}
+.highlight-group{display:flex;gap:16px;padding-right:16px}
+.highlight-card{width:calc((100cqw - 48px)/4);flex:none;background:#100c07;border:1px solid #8b693a44}
+.highlight-image{aspect-ratio:1;overflow:hidden;background:#090603}
+.highlight-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.highlight-card:hover img{transform:scale(1.025)}
+.highlight-copy{padding:20px 18px 24px;min-height:160px}
+.highlight-brand{margin:0 0 10px!important;color:#d0aa6b!important;font-size:10px!important;letter-spacing:.18em}
+.highlight-copy h3{margin:0 0 12px;font:400 clamp(17px,1.5vw,22px)/1.4 Georgia,serif;color:#f3eee5}
+.highlight-copy p{margin:0;color:#a99e8a;font-size:12px;line-height:1.6}
+.highlight-window:hover .highlight-track,.highlight-window:focus-within .highlight-track,.highlight-window.is-paused .highlight-track{animation-play-state:paused}
+@keyframes highlight-scroll{to{transform:translateX(-50%)}}
+@media(max-width:1100px) and (min-width:901px){:root{--header-height:118px}}
+@media(max-width:900px){:root{--header-height:72px}header{padding-inline:var(--page-gutter)}.logo{width:auto}.highlight-card{width:calc((100cqw - 16px)/2)}.promotion-card{height:calc((100cqw - 12px)*.2333333)}.marketing-section{padding-bottom:36px}.about{padding-inline:var(--page-gutter)}}
+@media(max-width:540px){.promotion-grid{grid-template-columns:1fr;gap:14px}.promotion-card{height:auto;aspect-ratio:3/1}.highlight-card{width:78cqw}.highlight-copy{min-height:165px}.highlight-heading{align-items:start}.scroll-control{padding:8px 10px;font-size:11px}.section-heading{margin-bottom:22px}}
+@media(prefers-reduced-motion:reduce){.highlight-track{animation:none}.highlight-window{overflow-x:auto}.highlight-group[aria-hidden=true]{display:none}.promotion-card img,.highlight-card img{transition:none}}
