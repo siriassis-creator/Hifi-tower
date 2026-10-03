@@ -1,3 +1,44 @@
-const brands=["WHARFEDALE","audiolab","MISSION","QUAD","LEAK","SINE","ATLAS","MAGNETAR"];
-const cats=[["SPEAKERS","Bookshelf / Floorstanding / Home Theater"],["AMPLIFIERS","Integrated / Power / Pre-Amplifiers"],["SOURCES","CD Player / Streamer / Turntable"],["CABLES & ACCESSORIES","Cables / Power / Racks / Audio Tuning"]];
-export default function Home(){return <main><header><a className="logo" href="#"><span>▥</span><b>HIFI TOWER</b><small>BANGKOK</small></a><nav><a className="active" href="#">HOME</a><a href="#brands">BRANDS</a><a href="#products">PRODUCTS</a><a href="https://hifitower.co.th/">PROMOTIONS</a><a href="https://hifitower.co.th/">NEWS & REVIEWS</a><a href="https://hifitower.co.th/">WORKSHOP</a><a href="#about">ABOUT</a><a href="#about">CONTACT</a></nav><div className="icons">⌕　♙　▱　 <small>TH | EN</small></div></header><section className="hero"><div className="heroPhoto"/><div className="veil"/><div className="copy"><p className="eyebrow">THE ART OF SOUND</p><h1>Experience<br/>Music<br/>As It Was Meant<br/><em>To Be Heard</em></h1><div className="line"/><p>บริษัท ไฮไฟทาวเวอร์ จำกัด<br/>ไฮไฟทาวเวอร์ เป็นผู้นำเข้าเครื่องเสียง แบรนด์ดังจากประเทศอังกฤษ ได้แก่ Wharfedale, Mission, audiolab, Quad, Leak อีกทั้งเรายังมี Accessories ได้แก่ Sine, Atlas นอกจากสินค้าที่กล่าวมานั้น เรายังมีบริการด้านคำแนะนำ ออกแบบ วางระบบ และพร้อมติดตั้งเครื่องเสียง และภาพ ด้วยทีมงานมืออาชีพมีคุณภาพ จนได้รับการยอมรับอย่างสูงจากลูกค้า ไม่ว่าจะเป็นห้องโฮมเธียร์เตอร์ ร้านอาหาร คาเฟ่ ห้องประชุม ได้อย่างครบวงจรและคุ้มค่าคุ้มราคา ที่เรียกได้ว่าดีที่สุด<br/><strong>“ครบ จบ คุ้ม ที่ HiFi Tower”</strong></p><a className="outline" href="#products">EXPLORE OUR COLLECTION　→</a></div><aside><b>WHARFEDALE</b><span>Elysian Series</span><u>Discover　→</u></aside></section><section className="brandbar" id="brands">{brands.map(b=><strong key={b}>{b}</strong>)}</section><section className="cards" id="products">{cats.map((c,i)=><a key={c[0]} className={"card c"+i} href="https://hifitower.co.th/shop/"><div className="pic"/><div className="dark"/><div className="ct"><h2>{c[0]}</h2><p>{c[1]}</p><i>→</i></div></a>)}</section><section className="about" id="about"><p className="eyebrow">THE HIFI TOWER EXPERIENCE</p><h2>Four decades devoted<br/>to <em>better listening.</em></h2><p>Premium audio, home cinema and expert system design — curated for the room, the music and the listener.</p><a className="outline" href="https://hifitower.co.th/">DISCOVER HIFI TOWER　→</a></section></main>}
+import { getHomeContent, imageBackground, safeHref } from "../lib/content";
+
+export const revalidate = 60;
+
+export default async function Home() {
+  const { settings: home, brands, categories, navigation } = await getHomeContent();
+  return (
+    <main>
+      <header>
+        <a className="logo" href="#"><span>▥</span><b>HIFI TOWER</b><small>BANGKOK</small></a>
+        <nav>{navigation.map(item => <a key={item.slug} className={item.slug === "home" ? "active" : undefined} href={safeHref(item.href)}>{item.label}</a>)}</nav>
+        <div className="icons">⌕　♙　▱　 <small>TH | EN</small></div>
+      </header>
+      <section className="hero">
+        <div className="heroPhoto" style={{ backgroundImage: `linear-gradient(90deg,#090603 0%,transparent 28%,transparent 82%,#080604 100%),${imageBackground(home.hero_image_url) || "none"}` }} />
+        <div className="veil" />
+        <div className="copy">
+          <p className="eyebrow">{home.hero_eyebrow}</p>
+          <h1>{home.hero_title.map((line, index) => <span key={index}>{index === home.hero_title.length - 1 ? <em>{line}</em> : line}{index < home.hero_title.length - 1 && <br />}</span>)}</h1>
+          <div className="line" />
+          <p>{home.hero_description.split("\n").map((line, index) => <span key={index}>{index > 0 && <br />}{line}</span>)}<br /><strong>{home.hero_tagline}</strong></p>
+          <a className="outline" href={safeHref(home.hero_cta_url)}>{home.hero_cta_label}　→</a>
+        </div>
+        <aside><b>{home.featured_brand}</b><span>{home.featured_series}</span><a href={safeHref(home.featured_url)}><u>Discover　→</u></a></aside>
+      </section>
+      <section className="brandbar" id="brands">{brands.map(brand => <strong key={brand.slug}>{brand.name}</strong>)}</section>
+      <section className="cards" id="products">{categories.map((category, index) => (
+        <a key={category.slug} className={`card c${index}${category.image_crop ? " card--artwork" : ""}`} href={safeHref(category.href)} aria-label={`${category.name}: ${category.description}`}>
+          {category.image_crop ? (
+            <svg className="category-artwork" viewBox={`${category.image_crop.x} ${category.image_crop.y} ${category.image_crop.width} ${category.image_crop.height}`} width={category.image_crop.width} height={category.image_crop.height} aria-hidden="true" focusable="false">
+              <image href={category.image_url} width="2048" height="691" />
+            </svg>
+          ) : <><div className="pic" style={{ backgroundImage: imageBackground(category.image_url) }} /><div className="dark" /><div className="ct"><h2>{category.name}</h2><p>{category.description}</p><i>→</i></div></>}
+        </a>
+      ))}</section>
+      <section className="about" id="about">
+        <p className="eyebrow">{home.about_eyebrow}</p>
+        <h2>{home.about_title}<br /><em>{home.about_highlight}</em></h2>
+        <p>{home.about_description}</p>
+        <a className="outline" href={safeHref(home.about_cta_url)}>{home.about_cta_label}　→</a>
+      </section>
+    </main>
+  );
+}

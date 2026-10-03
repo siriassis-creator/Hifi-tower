@@ -1,0 +1,196 @@
+{
+  "settings": {
+    "id": "home",
+    "hero_eyebrow": "THE ART OF SOUND",
+    "hero_title": [
+      "Experience",
+      "Music",
+      "As It Was Meant",
+      "To Be Heard"
+    ],
+    "hero_description": "บริษัท ไฮไฟทาวเวอร์ จำกัด\nไฮไฟทาวเวอร์ เป็นผู้นำเข้าเครื่องเสียง แบรนด์ดังจากประเทศอังกฤษ ได้แก่ Wharfedale, Mission, audiolab, Quad, Leak อีกทั้งเรายังมี Accessories ได้แก่ Sine, Atlas นอกจากสินค้าที่กล่าวมานั้น เรายังมีบริการด้านคำแนะนำ ออกแบบ วางระบบ และพร้อมติดตั้งเครื่องเสียง และภาพ ด้วยทีมงานมืออาชีพมีคุณภาพ จนได้รับการยอมรับอย่างสูงจากลูกค้า ไม่ว่าจะเป็นห้องโฮมเธียร์เตอร์ ร้านอาหาร คาเฟ่ ห้องประชุม ได้อย่างครบวงจรและคุ้มค่าคุ้มราคา ที่เรียกได้ว่าดีที่สุด",
+    "hero_tagline": "“ครบ จบ คุ้ม ที่ HiFi Tower”",
+    "hero_image_url": "https://xgkziaiztaiesrvnmkdn.supabase.co/storage/v1/object/public/hifi-media/backgrounds/hero-v1.png",
+    "hero_cta_label": "EXPLORE OUR COLLECTION",
+    "hero_cta_url": "#products",
+    "featured_brand": "WHARFEDALE",
+    "featured_series": "Elysian Series",
+    "featured_url": "https://hifitower.co.th/shop/",
+    "about_eyebrow": "THE HIFI TOWER EXPERIENCE",
+    "about_title": "Four decades devoted",
+    "about_highlight": "to better listening.",
+    "about_description": "Premium audio, home cinema and expert system design — curated for the room, the music and the listener.",
+    "about_cta_label": "DISCOVER HIFI TOWER",
+    "about_cta_url": "https://hifitower.co.th/"
+  },
+  "brands": [
+    {
+      "slug": "wharfedale",
+      "name": "WHARFEDALE",
+      "sort_order": 0,
+      "published": true
+    },
+    {
+      "slug": "audiolab",
+      "name": "audiolab",
+      "sort_order": 1,
+      "published": true
+    },
+    {
+      "slug": "mission",
+      "name": "MISSION",
+      "sort_order": 2,
+      "published": true
+    },
+    {
+      "slug": "quad",
+      "name": "QUAD",
+      "sort_order": 3,
+      "published": true
+    },
+    {
+      "slug": "leak",
+      "name": "LEAK",
+      "sort_order": 4,
+      "published": true
+    },
+    {
+      "slug": "sine",
+      "name": "SINE",
+      "sort_order": 5,
+      "published": true
+    },
+    {
+      "slug": "atlas",
+      "name": "ATLAS",
+      "sort_order": 6,
+      "published": true
+    },
+    {
+      "slug": "magnetar",
+      "name": "MAGNETAR",
+      "sort_order": 7,
+      "published": true
+    }
+  ],
+  "categories": [
+    {
+      "slug": "speakers",
+      "name": "SPEAKERS",
+      "description": "Bookshelf / Floorstanding / Home Theater",
+      "image_url": "https://xgkziaiztaiesrvnmkdn.supabase.co/storage/v1/object/public/hifi-media/categories/approved-categories-v1.png",
+      "href": "https://hifitower.co.th/shop/",
+      "sort_order": 0,
+      "published": true,
+      "image_crop": {
+        "x": 10,
+        "y": 11,
+        "width": 1008,
+        "height": 368
+      }
+    },
+    {
+      "slug": "amplifiers",
+      "name": "AMPLIFIERS",
+      "description": "Integrated / Power / Pre-Amplifiers",
+      "image_url": "https://xgkziaiztaiesrvnmkdn.supabase.co/storage/v1/object/public/hifi-media/categories/approved-categories-v1.png",
+      "href": "https://hifitower.co.th/shop/",
+      "sort_order": 1,
+      "published": true,
+      "image_crop": {
+        "x": 1030,
+        "y": 11,
+        "width": 1008,
+        "height": 368
+      }
+    },
+    {
+      "slug": "sources",
+      "name": "SOURCES",
+      "description": "CD Player / Streamer / Turntable",
+      "image_url": "https://xgkziaiztaiesrvnmkdn.supabase.co/storage/v1/object/public/hifi-media/categories/approved-categories-v1.png",
+      "href": "https://hifitower.co.th/shop/",
+      "sort_order": 2,
+      "published": true,
+      "image_crop": {
+        "x": 1030,
+        "y": 391,
+        "width": 1008,
+        "height": 288
+      }
+    },
+    {
+      "slug": "cables-accessories",
+      "name": "CABLES & ACCESSORIES",
+      "description": "Cables / Power / Racks / Audio Tuning",
+      "image_url": "https://xgkziaiztaiesrvnmkdn.supabase.co/storage/v1/object/public/hifi-media/categories/approved-categories-v1.png",
+      "href": "https://hifitower.co.th/shop/",
+      "sort_order": 3,
+      "published": true,
+      "image_crop": {
+        "x": 10,
+        "y": 391,
+        "width": 1008,
+        "height": 288
+      }
+    }
+  ],
+  "navigation": [
+    {
+      "slug": "home",
+      "label": "HOME",
+      "href": "#",
+      "sort_order": 0,
+      "published": true
+    },
+    {
+      "slug": "brands",
+      "label": "BRANDS",
+      "href": "#brands",
+      "sort_order": 1,
+      "published": true
+    },
+    {
+      "slug": "products",
+      "label": "PRODUCTS",
+      "href": "#products",
+      "sort_order": 2,
+      "published": true
+    },
+    {
+      "slug": "promotions",
+      "label": "PROMOTIONS",
+      "href": "https://hifitower.co.th/",
+      "sort_order": 3,
+      "published": true
+    },
+    {
+      "slug": "news-reviews",
+      "label": "NEWS & REVIEWS",
+      "href": "https://hifitower.co.th/",
+      "sort_order": 4,
+      "published": true
+    },
+    {
+      "slug": "workshop",
+      "label": "WORKSHOP",
+      "href": "https://hifitower.co.th/",
+      "sort_order": 5,
+      "published": true
+    },
+    {
+      "slug": "about",
+      "label": "ABOUT",
+      "href": "#about",
+      "sort_order": 6,
+      "published": true
+    },
+    {
+      "slug": "contact",
+      "label": "CONTACT",
+      "href": "#about",
+      "sort_order": 7,
+      "published": true
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+export type HomeSettings = {
+  id: string;
+  hero_eyebrow: string;
+  hero_title: string[];
+  hero_description: string;
+  hero_tagline: string;
+  hero_image_url: string;
+  hero_cta_label: string;
+  hero_cta_url: string;
+  featured_brand: string;
+  featured_series: string;
+  featured_url: string;
+  about_eyebrow: string;
+  about_title: string;
+  about_highlight: string;
+  about_description: string;
+  about_cta_label: string;
+  about_cta_url: string;
+};
+export type Brand = { slug: string; name: string; sort_order: number; published: boolean };
+export type Category = { slug: string; name: string; description: string; image_url: string; image_crop?: { x: number; y: number; width: number; height: number } | null; href: string; sort_order: number; published: boolean };
+export type NavigationItem = { slug: string; label: string; href: string; sort_order: number; published: boolean };
+export type HomeContent = { settings: HomeSettings; brands: Brand[]; categories: Category[]; navigation: NavigationItem[] };
