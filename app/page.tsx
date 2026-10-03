@@ -3,7 +3,7 @@ import { getHomeContent, imageBackground, safeHref } from "../lib/content";
 export const revalidate = 60;
 
 export default async function Home() {
-  const { settings: home, brands, categories, navigation } = await getHomeContent();
+  const { settings: home, categories, navigation } = await getHomeContent();
   return (
     <main>
       <header>
@@ -21,12 +21,13 @@ export default async function Home() {
           <p>{home.hero_description.split("\n").map((line, index) => <span key={index}>{index > 0 && <br />}{line}</span>)}<br /><strong>{home.hero_tagline}</strong></p>
           <a className="outline" href={safeHref(home.hero_cta_url)}>{home.hero_cta_label}　→</a>
         </div>
-        <aside><b>{home.featured_brand}</b><span>{home.featured_series}</span><a href={safeHref(home.featured_url)}><u>Discover　→</u></a></aside>
+        <aside><a className="featured-title" href={safeHref(home.featured_url)}>{home.featured_brand}</a><span>{home.featured_series}</span></aside>
       </section>
-      <section className="brandbar" id="brands">{brands.map(brand => <strong key={brand.slug}>{brand.name}</strong>)}</section>
+      <section className="category-intro" id="brands" aria-labelledby="category-heading"><h2 id="category-heading">Product by Category</h2><p>We offer a variety of products and services to our clients including</p></section>
       <section className="cards" id="products" aria-label="Product categories">{categories.map(category => (
-        <div key={category.slug} className="card" role="img" aria-label={`${category.name}: ${category.description}`}>
-          <div className="pic" style={{ backgroundImage: imageBackground(category.image_url) }} />
+        <div key={category.slug} className="card">
+          <div className="pic" aria-hidden="true" style={{ backgroundImage: imageBackground(category.image_url) }} />
+          <h3 className="category-label">{category.name}</h3>
         </div>
       ))}</section>
       <section className="about" id="about">

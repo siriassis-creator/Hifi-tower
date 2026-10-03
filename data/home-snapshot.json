@@ -13,9 +13,9 @@
     "hero_image_url": "https://xgkziaiztaiesrvnmkdn.supabase.co/storage/v1/object/public/hifi-media/backgrounds/hero-v1.png",
     "hero_cta_label": "EXPLORE OUR COLLECTION",
     "hero_cta_url": "#products",
-    "featured_brand": "WHARFEDALE",
-    "featured_series": "Elysian Series",
-    "featured_url": "https://hifitower.co.th/shop/",
+    "featured_brand": "HiFi Tower",
+    "featured_series": "ผู้นำเข้าและจัดจำหน่าย เครื่องเสียง ลำโพง ประสบการณ์ 40 ปี",
+    "featured_url": "https://hifitower.co.th/",
     "about_eyebrow": "THE HIFI TOWER EXPERIENCE",
     "about_title": "Four decades devoted",
     "about_highlight": "to better listening.",
@@ -76,7 +76,7 @@
   "categories": [
     {
       "slug": "speakers",
-      "name": "SPEAKERS",
+      "name": "SPEAKER",
       "description": "Bookshelf / Floorstanding / Home Theater",
       "image_url": "https://xgkziaiztaiesrvnmkdn.supabase.co/storage/v1/object/public/hifi-media/categories/speakers-v2.webp",
       "href": "#products",
@@ -106,7 +106,7 @@
     },
     {
       "slug": "sources",
-      "name": "CD / SOURCES",
+      "name": "CD",
       "description": "CD Player / Streamer / Turntable",
       "image_url": "https://xgkziaiztaiesrvnmkdn.supabase.co/storage/v1/object/public/hifi-media/categories/sources-v2.webp",
       "href": "#products",
@@ -116,7 +116,7 @@
     },
     {
       "slug": "amplifiers",
-      "name": "AMPLIFIERS",
+      "name": "AMP",
       "description": "Integrated / Power / Pre-Amplifiers",
       "image_url": "https://xgkziaiztaiesrvnmkdn.supabase.co/storage/v1/object/public/hifi-media/categories/amplifiers-v2.webp",
       "href": "#products",
@@ -126,7 +126,7 @@
     },
     {
       "slug": "cables-accessories",
-      "name": "CABLES & ACCESSORIES",
+      "name": "CABLE ACCESSORIES",
       "description": "Cables / Power / Racks / Audio Tuning",
       "image_url": "https://xgkziaiztaiesrvnmkdn.supabase.co/storage/v1/object/public/hifi-media/categories/cables-accessories-v2.webp",
       "href": "#products",

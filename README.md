@@ -48,8 +48,8 @@ were generated using the legacy six-category screenshot and matching amber/black
 lighting. WebP originals are versioned in `public/images/categories` and served
 from Supabase `hifi-media/categories/*-v2.webp`. Cards preserve the approved
 hover zoom and brightness effect, carry accessible category descriptions, and
-have no visible text or destination links while the structure is being approved.
-The Sources panel retains the approved turntable image for CD / Sources.
+show the six legacy category labels, with destination links deferred.
+The CD panel retains the approved turntable image.
 
 ## Migration scope
 
